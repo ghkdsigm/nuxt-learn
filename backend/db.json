@@ -181,18 +181,5 @@
       "imageUrl": "http://placeimg.com/640/480/fashion"
     }
   ],
-  "carts": [
-    {
-      "id": 21,
-      "name": "Handcrafted Soft Pizza",
-      "price": "277.00",
-      "imageUrl": "http://placeimg.com/640/480/fashion"
-    },
-    {
-      "id": 1,
-      "name": "Intelligent Metal Mouse",
-      "price": "84.00",
-      "imageUrl": "http://placeimg.com/640/480/fashion"
-    }
-  ]
+  "carts": []
 }

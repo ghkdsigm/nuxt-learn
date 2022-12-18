@@ -29,4 +29,14 @@ export const actions = {
     }))
     context.commit('setCarts', items)
   },
+
+  // async nuxtServerInit(storeContext, nuxtContext) {
+  //   const { data } = await fetchCartItems()
+  //   const items = data.map((item) => ({
+  //     ...item,
+  //     imageUrl: `${item.imageUrl}?random=${Math.random()}`,
+  //   }))
+  //   storeContext.commit('setCarts', items)
+  // },
+  // 넉스트서버이닛은 랜더링전 데이터를 스토어에 불러놓는다 프론트 화면에서 ayncdata 없애도 불러옴
 }
