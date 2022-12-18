@@ -9,6 +9,7 @@
             <p>{{ cart.name }}</p>
             <span>{{ cart.price }}</span>
           </div>
+          <button @click="delCarted(cart.id)">장바구니에서 삭제</button>
         </li>
       </ul>
     </div>
@@ -19,6 +20,7 @@
 </template>
 
 <script>
+import { deleteCartItem } from '../api'
 export default {
   async asyncData({ store }) {
     await store.dispatch('fetchCarts')
@@ -27,6 +29,13 @@ export default {
   computed: {
     carts() {
       return this.$store.state.carts
+    },
+  },
+  methods: {
+    async delCarted(e) {
+      await deleteCartItem(e)
+      this.$store.commit('removeItemToCart', e)
+      // this.$router.push('/cart')
     },
   },
 }

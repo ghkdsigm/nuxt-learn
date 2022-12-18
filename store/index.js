@@ -5,6 +5,13 @@ export const state = () => ({
 })
 
 export const mutations = {
+  removeItemToCart(state, id) {
+    state.carts.forEach((x, i) => {
+      if (x.id === id) {
+        state.carts.splice(i, 1)
+      }
+    })
+  },
   addItemToCart(state, item) {
     state.carts.push(item)
   },

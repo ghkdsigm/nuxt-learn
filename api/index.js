@@ -29,10 +29,15 @@ function createCartItem(cartItem) {
   return instance.post('/carts', cartItem)
 }
 
+function deleteCartItem(id) {
+  return instance.delete(`/carts/${id}`)
+}
+
 export {
   fetchProducts,
   fetchProductById,
   fetchProductsByKeyword,
   fetchCartItems,
   createCartItem,
+  deleteCartItem,
 }
