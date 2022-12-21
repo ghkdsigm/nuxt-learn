@@ -14,7 +14,7 @@
         >
           <img class="product-image" :src="item.imageUrl" alt="" />
           <p>{{ item.name }}</p>
-          <span>{{ item.price }}</span>
+          <span>{{ Math.floor(item.price) }}</span>
         </li>
       </ul>
       <div class="cart-wrapper">
